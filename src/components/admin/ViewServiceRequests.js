@@ -23,7 +23,7 @@ function  ViewServiceRequests(){
         // make api call to delete
         const reqId = event.target.name
         console.log(reqId);
-        await axios.post('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/markResolved',{
+        await axios.post('http://localhost:4000/markResolved',{
             id:reqId
         });
 
@@ -41,7 +41,7 @@ function  ViewServiceRequests(){
         const call = async ()=>{
 
 
-            let serviceData = await axios.get('http://ec2-204-236-188-241.us-west-1.compute.amazonaws.com:4000/getAllServiceRequests');
+            let serviceData = await axios.get('http://localhost:4000/getAllServiceRequests');
             console.log(serviceData);
 
             serviceData = serviceData.data.data;
@@ -67,6 +67,7 @@ return <>
                 <tr>
                     <th>User ID</th>
                     <th>Device Type</th>
+                    <th>Request Type</th>
                     <th>Description</th>
                     <th>Created At</th>
                     <th>Actions</th>
@@ -81,6 +82,7 @@ return <>
                         return <tr id={el.id}>
                             <td>{el.userId}</td>
                             <td>{el.device}</td>
+                            <td>{el.requestType}</td>
                             <td>{el.description}</td>
                             <td>{el.dateCreated}</td>
 
