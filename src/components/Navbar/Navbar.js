@@ -18,7 +18,7 @@ const NavBar =()=> {
                     className="d-inline-block align-top"
                 />
                 {" "}
-                Smart Meter System
+                Smart Meter Management System
             </Navbar.Brand>
         {/*</Container>/*/}
     </Navbar>

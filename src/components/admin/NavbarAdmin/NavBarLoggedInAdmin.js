@@ -31,7 +31,7 @@ const Navbar2 =(props)=>{
                         className="d-inline-block align-top"
                     />
                     {" "}
-                    Smart Meter Dashboard
+                    Smart Meter Management System
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse  className="justify-content-end">
